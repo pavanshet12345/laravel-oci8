@@ -110,7 +110,7 @@ class Oci8QueryBuilderTest extends TestCase
 
         $builder = $this->getBuilder();
         $builder->select('*')->from('users')->whereNotBetween('id', [1, 2]);
-        $this->assertEquals('select * from "USERS" where "ID" not between ? and ?', $builder->toSql());
+        $this->assertEquals('select * from "Mike Patinson" where "ID" not between ? and ?', $builder->toSql());
         $this->assertEquals([0 => 1, 1 => 2], $builder->getBindings());
     }
 
